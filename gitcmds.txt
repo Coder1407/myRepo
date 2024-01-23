@@ -1,0 +1,102 @@
+--------------------------------
+Setup
+--------------------------------
+git init: initialize an existing directory as a Git repository
+
+git clone [URL] [Directory_Name]: retrieve an entire repository from a hosted location via URL
+
+git status: show modified files in working directory, staged for your next commit
+
+git diff: diff of what is changed but not staged
+
+--------------------------------
+Reviewing history
+--------------------------------
+git log: show all commits in the current branch’s history.
+
+git log -3: get latest 3 commits history
+
+git log -p: show actual changes in content on the terminal 
+
+git log --oneline: list all commits in online with just commit name and SHA ids
+
+git log --stat: shows stats of all changes made in file (doesn't show actual content modified)
+
+git show SHA_ID: shows all changes made in particular commit
+
+---------------------------------
+Making commits
+---------------------------------
+git add [file_name.type]: add a file as it looks now to your next commit (stage).
+
+git commit -m “[init file_name.type]”: commit your staged content as a new commit snapshot
+
+git commit -m “[descriptive message]”: commit your staged content as a new commit snapshot
+
+git restore [file]: restore to head of commit
+
+
+---------------------------------
+Branching
+---------------------------------
+
+git branch: list your branches, a* will appear next to the currently active branch.
+
+git branch [branch-name]: create a new branch at the current commit.
+
+git checkout: switch to another branch and check it out into your working directory.
+
+git checkout -b [branch-name]: make a new branch and move to it.
+
+git commit -am "[Descriptive-message"]: add + commit
+
+git merge [branch]: merge a remote branch into your current branch to bring it up to date
+
+git branch -d [branch-name]: to permanently delete a merged branch.
+
+git tag -a betaV1.0 b8bf435729530ccd1dd1a2b9bec7d3531bf2c51e -m "My Beta Release" : adding tag to master commit
+
+git tag -d betaV1.0: remove beta tag
+
+git stash: take working directory commits to stash area
+
+git pull: copy changes form remote area to working directory
+
+git stash list: shows stash area
+
+git stash apply: unstashing
+
+git push -u origin main: make commits from working directory to remote server.
+
+
+---------------------------------
+Undoing Changes in Git
+---------------------------------
+
+git commit --amend: amend the most recent commit (change descriptive message of recent commit)
+
+git revert [SHA ID]: revert given commit
+
+git reset --soft [SHA ID]: delete commit (dangerous command)
+
+~
+
+
+---------------------------------
+Pushing Commit
+---------------------------------
+
+git remote add origin https://github.com/Coder1407/myRepo.git : mapping local branch to github remote branch(most updated one)
+
+
+git config --global user.name "Coder1407"
+git config --global user.email "amitesh1407@gmail.com"
+git config --list
+
+git push -u origin master
+
+
+
+
+
+
